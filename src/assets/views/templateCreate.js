@@ -11,7 +11,7 @@ export const templateCreate =()=>{
 // creamos div que contendrá la plantilla
     const containerCreate = document.createElement('div');
     // creamos el contenido dellogin
-    const contentCreate = `<button>Crear cuenta</button>
+    const contentCreate = `<p>Crear cuenta</p>
                             <button id="create">Create</button>`
 //pasar el contenido al div
     containerCreate.innerHTML=contentCreate;
