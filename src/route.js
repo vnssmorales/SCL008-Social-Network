@@ -1,5 +1,6 @@
 import {templateLogin} from './assets/views/templateLogin.js'
 import {templateCreate} from './assets/views/templateCreate.js'
+import {templateCreatePost} from './assets/views/templateCreatePost.js'
 
 
 /*
