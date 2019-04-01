@@ -7,5 +7,11 @@ export const templateCreatePost =() => {
     const contentCreatePost = `ENLAZAR A TEMPLATE`
 
     containerCreatePost.innerHTML = contentCreatePost;
-    
+    const btn=containerCreatePost.querySelector('#create');
+
+    btn.addEventListener('click',()=>{
+        console.log(createPost());
+})
+
+return containerCreatePost;
 }
