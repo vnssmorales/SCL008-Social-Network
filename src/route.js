@@ -13,6 +13,9 @@ const changeRouter = (hash) =>{
     if (hash==='#/create'){
         return showTemplate(hash);
     }
+    if (hash==='#/createPost'){
+        return showTemplate(hash);
+    }
 }
 //imprimira el template en el html
 const showTemplate = (hash) =>{
