@@ -29,6 +29,9 @@ break;
 case 'create':
 containterRoot.appendChild(templateCreate());
 break;
+case 'createPost':
+containterRoot.appendChild(templateCreatePost());
+break;
 default:
 containterRoot.innerHTML = `<p>Error 408</p>`
 }
