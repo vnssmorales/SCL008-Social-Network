@@ -13,3 +13,7 @@ export const createAccount = () => {
     return 'cuenta creada ok'
 }
 
+export const createPost = () => {
+
+    return 'escribe tu post'
+}
