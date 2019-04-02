@@ -7,4 +7,10 @@ const init =()=>{
     initRouter();
 }
 
+
+
 window.addEventListener('load', init);
+
+
+
+

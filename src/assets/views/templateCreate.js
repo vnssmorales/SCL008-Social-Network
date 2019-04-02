@@ -13,8 +13,8 @@ export const templateCreate =()=>{
     // creamos el contenido dellogin
     const contentCreate = `<p>Crear Cuenta</p>
                             <button id="create">Crear cuenta</button>
-                            <input type="email" placeholder="ingresar email">
-                            <input type="password" placeholder="ingresar contraseña">`
+                            <input id="email" type="email" placeholder="ingresar email">
+                            <input id="password" type="password" placeholder="ingresar contraseña">`
 //pasar el contenido al div
     containerCreate.innerHTML=contentCreate;
 //le pido que busque el id del bton dentro del div creado
@@ -22,7 +22,6 @@ export const templateCreate =()=>{
 //evento del boton que llama a la autentificacion de google
 
     btn.addEventListener('click',()=>{
-        console.log(createAccount());
     })
     return containerCreate;
 
