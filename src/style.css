@@ -1,3 +1,19 @@
 body{
     background-color: #648CC6;
 }
+#logo{
+    width: 0%;
+    height: 0%;
+    background: rgba(100, 139, 198, 0.521);
+    padding:5%;
+    border:1px;
+    margin:5px;;
+
+    display:-webkit-flex;
+    display:-ms-flexbox;
+    display:flex;
+
+
+    
+
+}
