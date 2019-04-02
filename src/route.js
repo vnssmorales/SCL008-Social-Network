@@ -2,6 +2,7 @@ import {templateLogin} from './assets/views/templateLogin.js'
 import {templateCreate} from './assets/views/templateCreate.js'
 import {templateCreatePost} from './assets/views/templateCreatePost.js'
 import {templateUserActive} from './assets/views/templateUserActive.js'
+import {templateLogOut} from './assets/views/templateLogOut.js'
 
 /*
 crear una funcion que reciba el hast y segun el match retorne otra funcion que va a imprimir el template en el html
@@ -18,6 +19,9 @@ const changeRouter = (hash) =>{
         return showTemplate(hash);
     }
     if (hash==='#/createPost'){
+        return showTemplate(hash);
+    }
+    if (hash==='#/logOut'){
         return showTemplate(hash);
     }
 }
@@ -41,6 +45,9 @@ containterRoot.appendChild(templateUserActive());
 break;
 case 'createPost':
 containterRoot.appendChild(templateCreatePost());
+break;
+case 'logOut':
+containterRoot.appendChild(templateLogOut());
 break;
 default:
 containterRoot.innerHTML = `<p>Error 408</p>`
