@@ -12,8 +12,8 @@ export const templateCreate =()=>{
     const containerCreate = document.createElement('div');
     // creamos el contenido dellogin
     const contentCreate = `<p>Crear Cuenta</p>
-                            <button id="create">Create</button>
-                            <input type="email placeholder="ingresar email">
+                            <button id="create">Crear cuenta</button>
+                            <input type="email" placeholder="ingresar email">
                             <input type="password" placeholder="ingresar contraseña">`
 //pasar el contenido al div
     containerCreate.innerHTML=contentCreate;
