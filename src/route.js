@@ -1,7 +1,10 @@
 import {templateLogin} from './assets/views/templateLogin.js'
 import {templateCreate} from './assets/views/templateCreate.js'
 import {templateCreatePost} from './assets/views/templateCreatePost.js'
+<<<<<<< Updated upstream
 import {templateUserActive} from './assets/views/templateUserActive.js'
+=======
+>>>>>>> Stashed changes
 import {templateLogOut} from './assets/views/templateLogOut.js'
 
 /*
