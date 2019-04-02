@@ -1,5 +1,6 @@
 import {templateLogin} from './assets/views/templateLogin.js'
 import {templateCreate} from './assets/views/templateCreate.js'
+import {templateCreatePost} from './assets/views/templateCreatePost.js'
 
 
 /*
@@ -11,6 +12,9 @@ const changeRouter = (hash) =>{
         return showTemplate(hash);
     }
     if (hash==='#/create'){
+        return showTemplate(hash);
+    }
+    if (hash==='#/createPost'){
         return showTemplate(hash);
     }
 }
@@ -28,6 +32,9 @@ containterRoot.appendChild(templateLogin());
 break;
 case 'create':
 containterRoot.appendChild(templateCreate());
+break;
+case 'createPost':
+containterRoot.appendChild(templateCreatePost());
 break;
 default:
 containterRoot.innerHTML = `<p>Error 408</p>`
