@@ -1,7 +1,7 @@
 import {templateLogin} from './assets/views/templateLogin.js'
 import {templateCreate} from './assets/views/templateCreate.js'
 import {templateCreatePost} from './assets/views/templateCreatePost.js'
-
+import {templateUserActive} from './assets/views/templateUserActive.js'
 
 /*
 crear una funcion que reciba el hast y segun el match retorne otra funcion que va a imprimir el template en el html
@@ -12,6 +12,9 @@ const changeRouter = (hash) =>{
         return showTemplate(hash);
     }
     if (hash==='#/create'){
+        return showTemplate(hash);
+    }
+    if (hash==='#/userActive'){
         return showTemplate(hash);
     }
     if (hash==='#/createPost'){
@@ -32,6 +35,9 @@ containterRoot.appendChild(templateLogin());
 break;
 case 'create':
 containterRoot.appendChild(templateCreate());
+break;
+case 'userActive':
+containterRoot.appendChild(templateUserActive());
 break;
 case 'createPost':
 containterRoot.appendChild(templateCreatePost());
