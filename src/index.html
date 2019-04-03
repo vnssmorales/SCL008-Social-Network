@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Walk Chile</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css  ">
     <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
 <script>
   // Initialize Firebase
@@ -20,27 +21,28 @@
   firebase.initializeApp(config);
 </script>
 </head>
-<body>
-    <header>
-        <div class="element"><img src="./img/logo.jpg" alt="logo"></div>
-        
-    </header>
-    <ul>
-        <li>
-            <a href="#/login">Login Google</a>
-        </li>
-        <li>
-            <a href="#/create">Create Account</a>
-        </li>
-        <li>
-            <a href="#/userActive">Usuario Registrado</a>
-        </li>
-        <li>
+<body> 
+        <header>
+                <img src="./img/logo.jpg" class="logo" />
+                <nav>
+                <ul>
+                <li><a href="#/create">Registro</a></li>
+                <li><a href="#/login">Ingreso</a></li>
+                <li><a href="#/about">Quienes Somos</a></li>
+                    </ul>
+                </nav>
+        </header>
+ 
+        <ul>
+          <!-- <li><a href="#/create">Create Account </a></li> -->
+          <!-- <li><a href="#/userActive">Login</a></li> -->
+          <!-- <li><a href="#/login">Login Google</a></li> -->
+        <!-- <li>
             <a href="#/createPost">Crear Post</a>
-        </li>
-        <li>
+        </li> -->
+        <!-- <li>
             <a href="#/logOut">Deslogueate</a>
-        </li>
+        </li> -->
     </ul>
     <div id='root'>
 
@@ -51,7 +53,7 @@
         <p>Te invitamos a usar la nueva aplicación para saber todo sobre lugares de Chile, actividades, hospedaje, y tips para preparar tu viaje. 
                 Si es primera vez que viajas, inicia una nueva conversación dónde puedes pedir recomendaciones para tu primer viaje. 
                 Si ya eres viajero frecuente, comparte tus historias y datos imperdibles!</p>
-                <img src="./img/mano-desierto.jpg" alt="mano-desierto">
+                <!-- <img src="./img/mano-desierto.jpg" alt="mano-desierto"> -->
     </div>
 
 
