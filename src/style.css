@@ -8,7 +8,6 @@
 
 body, html{
     font-family: 'Raleway';
-    background-color: white;
 }
 
 header {
@@ -18,18 +17,31 @@ header {
     align-items: left;
     margin-left: 2%;
   }
+.wrapper {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+nav {
+    background-color: rgb(81, 131, 197);
+}
+
   nav ul {
-    display: flex;
-    list-style: none;
+    list-style-type: none;
     padding: 0;
+    display: flex;
+    justify-content: flex-end;
   }
   nav a{
       text-decoration: none;
+      text-align: center;
       display: block;
       padding: 10px;
-      text-align: center;
   }
-  
+  nav a:hover{
+      background-color: blanchedalmond;
+  }
+
  .logo {
     height: 90px;
     width: 90px;
