@@ -1,7 +1,6 @@
 import {templateLogin} from './assets/views/templateLogin.js'
 import {templateCreate} from './assets/views/templateCreate.js'
 import {templateCreatePost} from './assets/views/templateCreatePost.js'
-import {templateUserActive} from './assets/views/templateUserActive.js'
 import {templateLogOut} from './assets/views/templateLogOut.js'
 
 /*
@@ -15,9 +14,7 @@ const changeRouter = (hash) =>{
     if (hash==='#/create'){
         return showTemplate(hash);
     }
-    if (hash==='#/userActive'){
-        return showTemplate(hash);
-    }
+    
     if (hash==='#/createPost'){
         return showTemplate(hash);
     }
@@ -39,9 +36,6 @@ containterRoot.appendChild(templateLogin());
 break;
 case 'create':
 containterRoot.appendChild(templateCreate());
-break;
-case 'userActive':
-containterRoot.appendChild(templateUserActive());
 break;
 case 'createPost':
 containterRoot.appendChild(templateCreatePost());
