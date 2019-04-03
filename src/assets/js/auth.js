@@ -37,26 +37,40 @@ export const createAccount = () => {
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
-        console.log(errorCode);
-        console.log(errorMessage);
         // [START_EXCLUDE]
-        if (errorCode === 'auth/wrong-password') {
-            alert('Wrong password.');
-          } else {
-            alert(errorMessage);
-          }
-          console.log(error);
-          document.getElementById('quickstart-sign-in').disabled = false;
-          // [END_EXCLUDE]
+        if (errorCode == 'auth/weak-password') {
+          alert('The password is too weak.');
+        } else {
+          alert(errorMessage);
+        }
+        console.log(error);
+        // [END_EXCLUDE]
       });
-      // [END authwithemail]
-    
-    document.getElementById('quickstart-sign-in').disabled = true;
+      // [END createwithemail]
   
     return 'cuenta creada ok'
 }
 
 export const userActive = () =>{
+    let userRegistered = document.getElementById('user').value;
+    let key = document.getElementById('pass').value;
+    
+// [START authwithemail]
+firebase.auth().signInWithEmailAndPassword(userRegistered, key).catch(function(error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    // [START_EXCLUDE]
+    if (errorCode === 'auth/wrong-password') {
+      alert('Wrong password.');
+    } else {
+      alert(errorMessage);
+    }
+    console.log(error);
+    document.getElementById('quickstart-sign-in').disabled = false;
+    // [END_EXCLUDE]
+  });
+  // [END authwithemail]
 
     return 'Login con usuario y contraseña ok'
 
