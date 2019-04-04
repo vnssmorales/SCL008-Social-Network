@@ -3,6 +3,7 @@ import {templateCreate} from './assets/views/templateCreate.js'
 import {templateCreatePost} from './assets/views/templateCreatePost.js'
 import {templateLogOut} from './assets/views/templateLogOut.js'
 
+
 /*
 crear una funcion que reciba el hast y segun el match retorne otra funcion que va a imprimir el template en el html
 */

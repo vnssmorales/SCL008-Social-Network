@@ -1,4 +1,4 @@
-//para auntentificar desde firebase
+import{validate} from './../js/validation.js';
 
 // Crearemos dos funciones que simularan el login con google y la creacion de la cuenta
 
@@ -30,9 +30,11 @@ export const logOut = () =>{
     }
 
 export const createAccount = () => {
+    let userName = document.getElementById('name').value;
+    let userLastName = document.getElementById('lastname').value;
     let email = document.getElementById('email').value;
     let password = document.getElementById('password').value;
-
+    validate(userName,userLastName,email,password);
     firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
         // Handle Errors here.
         var errorCode = error.code;
