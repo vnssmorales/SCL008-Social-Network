@@ -2,6 +2,7 @@ import {templateLogin} from './assets/views/templateLogin.js'
 import {templateCreate} from './assets/views/templateCreate.js'
 import {templateCreatePost} from './assets/views/templateCreatePost.js'
 import {templateLogOut} from './assets/views/templateLogOut.js'
+import {templateHome} from './assets/views/templateHome.js'
 
 
 /*
@@ -9,13 +10,15 @@ crear una funcion que reciba el hast y segun el match retorne otra funcion que v
 */
 
 const changeRouter = (hash) =>{
+    if (hash==='#/home'){
+        return showTemplate(hash);
+    }
     if (hash==='#/login'){
         return showTemplate(hash);
     }
     if (hash==='#/create'){
         return showTemplate(hash);
     }
-    
     if (hash==='#/createPost'){
         return showTemplate(hash);
     }
@@ -32,6 +35,9 @@ containterRoot.innerHTML='';
 //hacemos el match del hash utilizado y el template que quiero mostrar
 
 switch(router){
+case 'home':
+containterRoot.appendChild(templateHome());
+break;
 case 'login':
 containterRoot.appendChild(templateLogin());
 break;
