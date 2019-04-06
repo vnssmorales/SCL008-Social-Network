@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,66 +8,62 @@
     <title>Walk Chile</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="media.css  ">
-    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyAAHGUb-hhejq92Rmf3TwkuU0rgtPLeTZs",
-    authDomain: "viajeros-chile.firebaseapp.com",
-    databaseURL: "https://viajeros-chile.firebaseio.com",
-    projectId: "viajeros-chile",
-    storageBucket: "viajeros-chile.appspot.com",
-    messagingSenderId: "1071346395262"
-  };
-  firebase.initializeApp(config);
-</script>
 </head>
-<body> 
-        <header>
-                <img src="./img/logo.jpg" class="logo" />
-                <div class="wrapper">
-                <nav>
+
+<body>
+    <header>
+        <div class="contenedor">
+          <!-- <img src="./img/logo.jpg" class="logo" />  -->
+            <input type="checkbox" id="boton-menu">
+            <label for="boton-menu"> <img src="./img/menuh.png" id="img-menu"></label>
+            <nav class="menu">
                 <ul>
-                <li><a href="#/home">Inicio</a></li>
-                <li><a href="#/create">Registro</a></li>
-                <li><a href="#/login">Ingreso</a></li>
-                <li><a href="#/about">Nosotros</a></li>
+                    <li><a href="#/home">Inicio</a></li>
+                    <li><a href="#/create">Registro</a></li>
+                    <li><a href="#/login">Ingreso</a></li>
+                    <li><a href="#/about">Nosotros</a></li>
                 </ul>
-                </nav>
-              </div>
-        </header>
-        <!-- <ul> -->
-          <!-- <li><a href="#/create">Create Account </a></li> -->
-          <!-- <li><a href="#/userActive">Login</a></li> -->
-          <!-- <li><a href="#/login">Login Google</a></li> -->
-        <!-- <li>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container" id="infofoto">
+            <p>Te invitamos a usar la nueva aplicación para saber todo sobre lugares de Chile, actividades, hospedaje, y
+                tips para preparar tu viaje.
+                Si es primera vez que viajas, inicia una nueva conversación dónde puedes pedir recomendaciones para tu
+                primer viaje.
+                Si ya eres viajero frecuente, comparte tus historias y datos imperdibles!</p>
+                <!-- <img src="./img/mano-desierto.jpg" alt="mano-desierto"> -->
+        </div>
+    </main>
+    <!-- <ul> -->
+    <!-- <li><a href="#/create">Create Account </a></li> -->
+    <!-- <li><a href="#/userActive">Login</a></li> -->
+    <!-- <li><a href="#/login">Login Google</a></li> -->
+    <!-- <li>
             <a href="#/createPost">Crear Post</a>
         </li> -->
-        <li>
-            <a href="#/logOut">Deslogueate</a>
-        </li> 
-    </ul>
+  <!--    <li>
+        <a href="#/logOut">Deslogueate</a>
+    </li>   -->
+    
     <div id='root'>
 
     </div>
 
-    <div class="infofoto">
+    
 
-        <p>Te invitamos a usar la nueva aplicación para saber todo sobre lugares de Chile, actividades, hospedaje, y tips para preparar tu viaje. 
-                Si es primera vez que viajas, inicia una nueva conversación dónde puedes pedir recomendaciones para tu primer viaje. 
-                Si ya eres viajero frecuente, comparte tus historias y datos imperdibles!</p>
-                <!-- <img src="./img/mano-desierto.jpg" alt="mano-desierto"> -->
-    </div>
-
-
-   
-    <script type="module" src="./main.js"></script>
     <footer>
-            <div id="element1">  
+        <div id="element1">
             <h3>WalkChile.cl</h3>
-            <p>La red social de todo viajero por Chile</p></div>
-            <div id="element2">
+            <p>La red social de todo viajero por Chile</p>
+        </div>
+        <div id="element2">
             <button>Ayuda</button></div>
-        </footer>
+    </footer>
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+    <script type="module" src="./main.js"></script>
 </body>
+
 </html>
