@@ -6,30 +6,28 @@
     box-sizing: border-box;
 }
 
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,700);
-
 body {
     font-family: 'Open Sans', sans-serif;
 }
 
-/*.logo {
+.logo {
     height: 90px;
     
     image-rendering: auto;
     image-rendering: crisp-edges;
     image-rendering: pixelated;
-}  */
+}  
 
 header {
     width: 100%;
-    background: rgb(128, 128, 224);
+    
   }
 
 #boton-menu {
       display: none;
   }
 
-header label {
+#tittle label {
     
       display: none;
       width: 30px;
@@ -37,7 +35,7 @@ header label {
       cursor: pointer;
       border-left: 1px solid #fff;
   }
-header label:hover {
+#tittle label:hover {
       cursor: pointer;
       background: rgba(0, 0, 0, 0.3);
   }
@@ -63,11 +61,34 @@ header label:hover {
     padding: 20px 20px;
     color: #fff;
     text-decoration: none;
+    background: rgb(128, 128, 224);
+}
+
+footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.sociales {
+    width: 100%;
+    text-align: center;
+}
+
+.help {
+    width: 100%;
+    text-align: right;
+}
+
+.copy {
+    font-size: 20px;
 }
 
 @media (max-width:768px) {
-    header label {
+    #tittle label {
         display: block;
+        background: rgb(128, 128, 224);
     }
 
     .menu {
