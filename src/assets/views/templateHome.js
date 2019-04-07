@@ -1,4 +1,3 @@
-
 export const templateHome =()=>{
 
     const containerHome = document.createElement('div');

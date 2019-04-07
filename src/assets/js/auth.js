@@ -1,6 +1,3 @@
-//import{validate} from './../js/validation.js';
-
-// Crearemos dos funciones que simularan el login con google y la creacion de la cuenta
 
 export const loginGoogle = () =>{
     var provider = new firebase.auth.GoogleAuthProvider();
@@ -30,12 +27,13 @@ export const logOut = () =>{
     }
 
 export const createAccount = (email,password) => {
-    
+  
     firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
         // [START_EXCLUDE]
+
         if (errorCode == 'auth/weak-password') {
           alert('La contraseña es muy debil');
         } else {
@@ -44,9 +42,18 @@ export const createAccount = (email,password) => {
         console.log(error);
         // [END_EXCLUDE]
       });
+      
       // [END createwithemail]
   
     return 'cuenta creada ok'
+}
+
+export function writeUserData(userName,userLastName,email) {
+  firebase.database().ref().set({
+    username: userName,
+    userlastname: userLastName,
+    email: email,
+  });
 }
 
 export const userActive = () =>{

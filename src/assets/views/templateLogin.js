@@ -1,5 +1,5 @@
-import {loginGoogle} from '../js/auth.js'
-import{userActive} from './../js/auth.js';
+import {loginGoogle,userActive,writeUserData} from '../js/auth.js'
+
 
 
 export const templateLogin =()=>{
@@ -21,6 +21,8 @@ export const templateLogin =()=>{
 
     btn.addEventListener('click',()=>{    
         loginGoogle();
+        writeUserData();
+
     })
 
     btn2.addEventListener('click',()=>{
@@ -30,6 +32,5 @@ export const templateLogin =()=>{
 
     return containerLogin;
 }
-
 
 
