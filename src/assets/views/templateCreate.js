@@ -1,4 +1,5 @@
-import{createAccount} from './../js/auth.js';
+//import{createAccount} from './../js/auth.js';
+import {validate} from './../js/validation.js'
 
 export const templateCreate =()=>{
 // creamos div que contendrá la plantilla
@@ -18,7 +19,11 @@ export const templateCreate =()=>{
 //evento del boton que llama a la autentificacion de google
 
     btn.addEventListener('click',()=>{
-        createAccount();
+    let userName = document.getElementById('name').value;
+    let userLastName = document.getElementById('lastname').value;
+    let email = document.getElementById('email').value;
+    let password = document.getElementById('password').value;
+    validate(userName,userLastName,email,password);
     })
     return containerCreate;  
 }
