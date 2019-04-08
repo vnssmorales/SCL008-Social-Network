@@ -11,30 +11,31 @@
     <link rel="stylesheet" href="media.css  ">
 </head>
 
+
 <body>
     <header>
-
     <img src="./img/LogoChile.png" class="logo" /> 
     </header>  
 
         <div class="contenedor" id="tittle">
          
-
-        <div class="contenedor">
-
             <input type="checkbox" id="boton-menu">
             <label for="boton-menu"> <img src="./img/menuh.png" id="img-menu"></label>
+    
             <nav class="menu">
+            <div class="wrapper">
+                <nav>
+
                 <ul>
                     <li><a href="#/home">Inicio</a></li>
                     <li><a href="#/create">Registro</a></li>
                     <li><a href="#/login">Ingreso</a></li>
                     <li><a href="#/about">Nosotros</a></li>
                 </ul>
+
             </nav>
-        </div>
-    </header>
-    
+        </div> 
+
     <div id='root'>
 
     </div>
@@ -50,7 +51,10 @@
         </div>
     </div>
     </footer>
-    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script> 
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.0/firebase-database.js"></script> 
     <script type="module" src="./main.js"></script>
 </body>
 
