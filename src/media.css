@@ -1,7 +1,47 @@
-@media screen and (max-width:768px) {
-    header, nav ul {
+
+
+  @media (max-width:768px) {
+
+    header {
       flex-direction: row;
-      text-align: left;
+      text-align: center;
     }
 
-  }
+    #tittle label {
+        display: block;
+        background: rgb(128, 128, 224);
+    }
+ 
+    .input {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn-create .btn-ingresar{
+      display: flex;
+      justify-content: center;
+      align-items: start;
+    }
+
+    .menu {
+       position: absolute;
+       background: rgb(128, 128, 224);
+       width: 100%;
+       margin-left: -100%;
+       transition: all 0.5s;
+    }
+
+    .menu ul {
+        flex-direction: column;
+    }
+
+    .menu li {
+        border-top: 1px solid #fff;
+    }
+
+    #boton-menu:checked ~ .menu {
+        margin: 0;
+    }
+
+}
