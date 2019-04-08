@@ -1,9 +1,9 @@
 import {templateLogin} from './assets/views/templateLogin.js'
 import {templateCreate} from './assets/views/templateCreate.js'
 import {templateCreatePost} from './assets/views/templateCreatePost.js'
-import {templateLogOut} from './assets/views/templateLogOut.js'
+//import {templateLogOut} from './assets/views/templateLogOut.js'
 import {templateHome} from './assets/views/templateHome.js'
-
+import {templateAbout} from './assets/views/templateAbout.js'
 
 /*
 crear una funcion que reciba el hast y segun el match retorne otra funcion que va a imprimir el template en el html
@@ -22,7 +22,7 @@ const changeRouter = (hash) =>{
     if (hash==='#/createPost'){
         return showTemplate(hash);
     }
-    if (hash==='#/logOut'){
+    if (hash==='#/about'){
         return showTemplate(hash);
     }
 }
@@ -47,8 +47,8 @@ break;
 case 'createPost':
 containterRoot.appendChild(templateCreatePost());
 break;
-case 'logOut':
-containterRoot.appendChild(templateLogOut());
+case 'about':
+containterRoot.appendChild(templateAbout());
 break;
 default:
 containterRoot.innerHTML = `<p>Error 408</p>`

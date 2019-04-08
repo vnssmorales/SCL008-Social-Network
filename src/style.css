@@ -135,23 +135,8 @@ footer .container {
       padding: 10px;
       text-align: center;
   }
-<<<<<<< Updated upstream
   
  
-=======
-  nav a:hover{
-      background-color: blanchedalmond;
-  }
-
- .logo {
-    height: 200px;
-    width: 800px;
-    image-rendering: auto;
-    image-rendering: crisp-edges;
-    image-rendering: pixelated;
-
-}
->>>>>>> Stashed changes
 .infofoto{
     background-color: whitesmoke;
     margin-top: 2%;
