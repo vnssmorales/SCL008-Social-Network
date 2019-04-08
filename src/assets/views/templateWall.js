@@ -2,7 +2,7 @@ import{logOut} from './../js/auth.js';
 export const templateLogOut =() => {
     const containerLogOut = document.createElement('div');
     const contentlogOut = `<p>Desloguearse</p>
-                                <button id="logOut">Desloguearse</button>`
+                           <button class="btn" id="logOut">Desloguearse</button>`
     containerLogOut.innerHTML = contentlogOut;
     const btn=containerLogOut.querySelector('#logOut');
     btn.addEventListener('click',()=>{

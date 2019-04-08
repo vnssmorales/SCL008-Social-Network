@@ -5,7 +5,7 @@ export const templateCreatePost =() => {
     const containerCreatePost = document.createElement('div');
 
     const contentCreatePost = `<p>Crear Post</p>
-                                <button id="createPost">CreatePost</button>`
+                               <button class="btn" id="createPost">CreatePost</button>`
 
     containerCreatePost.innerHTML = contentCreatePost;
     const btn=containerCreatePost.querySelector('#createPost');
