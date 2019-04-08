@@ -1,87 +1,99 @@
 
 export const loginGoogle = () =>{
-    var provider = new firebase.auth.GoogleAuthProvider();
-    firebase.auth().signInWithPopup(provider).then(function(result) {
-        // This gives you a Google Access Token. You can use it to access the Google API.
-        var token = result.credential.accessToken;
-        // The signed-in user info.
-        var user = result.user;
-        // ...
-      }).catch(function(error) {
-        // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        // The email of the user's account used.
-        var email = error.email;
-        // The firebase.auth.AuthCredential type that was used.
-        var credential = error.credential;
-        // ...
-      });
+  var provider = new firebase.auth.GoogleAuthProvider();
+  firebase.auth().signInWithPopup(provider).then(function(result) {
+      // This gives you a Google Access Token. You can use it to access the Google API.
+      var token = result.credential.accessToken;
+      // The signed-in user info.
+      var user = result.user;
+      // ...
+    }).catch(function(error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      // The email of the user's account used.
+      var email = error.email;
+      // The firebase.auth.AuthCredential type that was used.
+      var credential = error.credential;
+      // ...
+    });
 }
 export const logOut = () =>{
-    firebase.auth().signOut().then(function() {
-        console.log('Sign-out successful.')
-      }).catch(function(error) {
-        // An error happened.
-      });
-    }
+  firebase.auth().signOut().then(function() {
+      console.log('Sign-out successful.')
+    }).catch(function(error) {
+      // An error happened.
+    });
+  }
 
-export const createAccount = (email,password) => {
-  
-    firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
-        // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        // [START_EXCLUDE]
+export const createAccount = (userName,userLastName,email,password) => {
 
-        if (errorCode == 'auth/weak-password') {
-          alert('La contraseña es muy debil');
-        } else {
-          alert(errorMessage);
-        }
-        console.log(error);
-        // [END_EXCLUDE]
-      });
-      
-      // [END createwithemail]
-  
-    return 'cuenta creada ok'
+  firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      // [START_EXCLUDE]
+
+      if (errorCode == 'auth/weak-password') {
+        alert('La contraseña es muy debil');
+      } else {
+        alert(errorMessage);
+      }
+      console.log(error);
+      // [END_EXCLUDE]
+    });
+    firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+        //console.log(user.uid);
+        firebase.database().ref('users/'+ user.uid).set({
+          username: userName,
+          userlastname: userLastName,
+          email: email,
+        });
+      } else {
+        // No user is signed in.
+      }
+    });
+    
+    // [END createwithemail]
+
+  return 'cuenta creada ok'
 }
+
 
 export function writeUserData(userName,userLastName,email) {
-  firebase.database().ref().set({
-    username: userName,
-    userlastname: userLastName,
-    email: email,
-  });
-}
+  
+  }
+
+
 
 export const userActive = () =>{
-    let userRegistered = document.getElementById('user').value;
-    let key = document.getElementById('pass').value;
-    
+  let userRegistered = document.getElementById('user').value;
+  let key = document.getElementById('pass').value;
+  
 // [START authwithemail]
 firebase.auth().signInWithEmailAndPassword(userRegistered, key).catch(function(error) {
-    // Handle Errors here.
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    // [START_EXCLUDE]
-    if (errorCode === 'auth/wrong-password') {
-      alert('Error de password');
-    } else {
-      alert(errorMessage);
-    }
-    console.log(error);
-    document.getElementById('quickstart-sign-in').disabled = false;
-    // [END_EXCLUDE]
-  });
-  // [END authwithemail]
+  // Handle Errors here.
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  // [START_EXCLUDE]
+  if (errorCode === 'auth/wrong-password') {
+    alert('Error de password');
+  } else {
+    alert(errorMessage);
+  }
+  console.log(error);
+  document.getElementById('quickstart-sign-in').disabled = false;
+  // [END_EXCLUDE]
+});
+// [END authwithemail]
 
-    return 'Login con usuario y contraseña ok'
+  return 'Login con usuario y contraseña ok'
 
 }
 
 export const createPost = () => {
 
-    return 'escribe tu post'
+  return 'escribe tu post'
 }
+
