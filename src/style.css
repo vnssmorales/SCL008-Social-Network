@@ -26,6 +26,10 @@ header {
       display: none;
   }
 
+#title {
+    background: blue;
+}
+
 #tittle label {
     
       display: none;
@@ -60,7 +64,31 @@ header {
     padding: 20px 20px;
     color: #fff;
     text-decoration: none;
-    background: rgb(128, 128, 224);
+    background: rgb(77, 77, 201);
+}
+
+#input {
+    float: left;
+    width: 80%;
+    position: relative;
+    margin-left: 30px;
+    margin-bottom: 19px;
+    border-bottom: 1px solid black;
+    padding-top: 10%;
+    padding: 20px 20px;
+  }
+
+  .btn {
+      background: rgb(102, 102, 214);
+      color: #fff;
+      border-radius: 5px;
+  }
+
+
+
+.infofoto{
+    height: auto;
+    max-width: 100%;
 }
 
 footer .container {
@@ -83,6 +111,8 @@ footer .container {
 .copy {
     font-size: 20px;
 }
+
+
 
 @media (max-width:768px) {
     #tittle label {
@@ -134,23 +164,8 @@ footer .container {
       padding: 10px;
       text-align: center;
   }
-<<<<<<< Updated upstream
   
  
-=======
-  nav a:hover{
-      background-color: blanchedalmond;
-  }
-
- .logo {
-    height: 200px;
-    width: 800px;
-    image-rendering: auto;
-    image-rendering: crisp-edges;
-    image-rendering: pixelated;
-
-}
->>>>>>> Stashed changes
 .infofoto{
     background-color: whitesmoke;
     margin-top: 2%;

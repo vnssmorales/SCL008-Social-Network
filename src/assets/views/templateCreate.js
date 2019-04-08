@@ -5,11 +5,12 @@ export const templateCreate =()=>{
     const containerCreate = document.createElement('div');
 
     const contentCreate = `<p>Crear Cuenta</p>
-                            <input id="name" type="name" placeholder="Nombre">
-                            <input id="lastname" type="lastname" placeholder="ingresar apellido">
-                            <input id="email" type="email" placeholder="ingresar email">
-                            <input id="password" type="password" placeholder="ingresar contraseña">
-                            <button id="create">Crear cuenta</button>`
+    <div> </div>
+                            <div class="input">  <input id="name" type="name" placeholder="Nombre"> </div>
+                            <div class="input">  <input id="lastname" type="lastname" placeholder="ingresar apellido"> </div>
+                            <div class="input">  <input id="email" type="email" placeholder="ingresar email"> </div>
+                            <div class="input">  <input id="password" type="password" placeholder="ingresar contraseña"> </div>
+                            <button class="btn" id="create">Crear cuenta</button>`
 
 
     containerCreate.innerHTML=contentCreate;
