@@ -11,7 +11,7 @@ export const templateLogin =()=>{
                           <br></br>
                           <div class="input"> <input id="user" type="user" placeholder="ingresa usuario"> </div>
                           <div class="input"> <input id="pass" type="password" placeholder="ingresar contraseña"> </div>
-                         <button class="btn" id="userActive">Ingresar</button>`
+                          <div class="btn-ingresar"> <button class="btn" id="userActive">Ingresar</button>`
 //pasar el contenido al div
     containerLogin.innerHTML=contentLogin;
 //le pido que busque el id del bton dentro del div creado

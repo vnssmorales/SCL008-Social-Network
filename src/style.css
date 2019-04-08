@@ -30,6 +30,18 @@ header {
     background: blue;
 }
 
+#input {
+    display: flex;
+
+}
+
+#create {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+   
+  }
+
 #tittle label {
     
       display: none;
@@ -71,11 +83,34 @@ header {
     float: left;
     width: 80%;
     position: relative;
-    margin-left: 30px;
+    margin: 30px;
     margin-bottom: 19px;
     border-bottom: 1px solid black;
     padding-top: 10%;
-    padding: 20px 20px;
+    padding: 20px ;
+  }
+ 
+.btn-create {
+
+    width: 80%;
+    margin: 30px;
+    margin-bottom: 19px;
+    border-bottom: 1px solid black;
+    padding-top: 10%;
+    padding: 20px ;
+    text-align: center;
+    align-items: center;
+  }
+
+  .btn-ingresar {
+    width: 80%;
+    margin: 30px;
+    margin-bottom: 19px;
+    border-bottom: 1px solid black;
+    padding-top: 10%;
+    padding: 20px ;
+    text-align: center;
+    align-items: center;
   }
 
   .btn {
@@ -83,7 +118,6 @@ header {
       color: #fff;
       border-radius: 5px;
   }
-
 
 
 .infofoto{
@@ -108,39 +142,14 @@ footer .container {
     text-align: right;
 }
 
+
 .copy {
     font-size: 20px;
 }
 
 
 
-@media (max-width:768px) {
-    #tittle label {
-        display: block;
-        background: rgb(128, 128, 224);
-    }
 
-    .menu {
-       position: absolute;
-       background: rgb(128, 128, 224);
-       width: 100%;
-       margin-left: -100%;
-       transition: all 0.5s;
-    }
-
-    .menu ul {
-        flex-direction: column;
-    }
-
-    .menu li {
-        border-top: 1px solid #fff;
-    }
-
-    #boton-menu:checked ~ .menu {
-        margin: 0;
-    }
-
-}
   /*#img-menu {
       float: left;
   }
