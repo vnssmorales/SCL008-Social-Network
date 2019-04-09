@@ -9,4 +9,10 @@ export const validate = (userName,email,password) =>{
         createAccount(userName,email,password);
         return true;
     }
-}    
+}
+
+export const validateEmail = (email) => {
+    //expresión regular que simula el patrón del correo electrónico
+    let pattern = /\S+@\S+\.\S+/;
+    return pattern.test(email);
+  }
