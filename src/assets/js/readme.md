@@ -24,22 +24,18 @@ Luego de tomar la decisión respecto a cual sería nuestra data el primer paso f
 ## Quienes son los usuarios
 
 
-Quiénes son los usuarios
-Luego de una encuesta realizada detectamos que los usuarios de la pagina son jugadores habituales quienes buscan tener información permanente sobre lanzamientos,actualizaciones y eventos por otro lado también están aquellas personas que al no ser jugadores podrían considerarse como potenciales jugadores del juego lo que los convierte en posibles usuarios de nuestra pagina a la hora querer obtener información de las noticias que contribuirán a la toma de decisiones a la hora de jugar ya que en nuestra pagina encontraran las respuestas necesarias para estar informados en todos las áreas del juego.
+Los usuarios de "Walk Chile" son todos aquellos viajeros y nuevos viajeros que quieran saber datos sobre alojamiento, donde comer,
 
 
 ## Cómo el producto soluciona los problemas/necesidades de los usuarios.
 
-Para identificar como el producto soluciona necesidades en los usuarios nos basamos en las historias  de los mismos priorizando aquellas necesidades de mayor interés en las que se destacan el poder estar informados de las noticias,lanzamientos,actualizaciones, ,eventos,poder filtrar las noticias y poder progresar dentro del juego haciendo uso de la información actualizada que nuestra pagina les proporciona.
+
 
 
 
 ### Historias de usuario
 
-YO COMO jugador asiduo al juego team frortress 2 QUIERO noticias sobre actualizaciones,lanzamientos y eventos PARA avanzar mas etapas para participar de eventos.
 
-Yo como usuario que aún no juego Team fortress 2
-me gustaría leer noticias filtradas por fuentes.
 
 
 
@@ -53,13 +49,8 @@ gráfica correspondiente a cada set de datos
 ![figma.jpg](https://github.com/TatianaCastroLizama/SCL008-data-lovers/blob/master/src/imagen/figma.jpg)
 #### Testeos de usabilidad
 
-Durante el reto deberás realizar tests de usabilidad con distintos usuarios, y
-en base a los resultados de esos tests, deberás iterar tus diseños. Cuéntanos
-qué problemas de usabilidad detectaste a través de los tests y cómo los
-mejoraste en tu propuesta final.
 
-https://www.useloom.com/share/ffb8ee2b17ec432884c67a11b271c7d5
 
 ### Planificación
 
-https://trello.com/b/nDfAImFN/proyecto-2-data-lovers
+https://trello.com/b/GlPOCjcP/proyecto-red-social

@@ -1,4 +1,4 @@
-import {loginGoogle,userActive} from '../js/auth.js'
+import {loginGoogle,userActive,remember} from '../js/auth.js'
 
 
 
@@ -11,12 +11,14 @@ export const templateLogin =()=>{
                           <br></br>
                           <div class="input"> <input id="user" type="user" placeholder="ingresa usuario"> </div>
                           <div class="input"> <input id="pass" type="password" placeholder="ingresar contraseña"> </div>
-                          <div class="btn-ingresar"> <button class="btn" id="userActive">Ingresar</button>`
+                          <div class="btn-ingresar"> <button class="btn" id="userActive">Ingresar</button> 
+                          <div class="btn-recordar"> <button class="btn" id="userremember">Recordar contraseña</button>`
 //pasar el contenido al div
     containerLogin.innerHTML=contentLogin;
 //le pido que busque el id del bton dentro del div creado
     const btn=containerLogin.querySelector('#login');
     const btn2=containerLogin.querySelector('#userActive');
+    const btn3=containerLogin.querySelector('#userremember');
 //evento del boton que llama a la autentificacion de google
 
     btn.addEventListener('click',()=>{    
@@ -29,6 +31,11 @@ export const templateLogin =()=>{
         //console.log('prueba')
          userActive();
      })
+
+    btn3.addEventListener('click',()=>{
+        //recordar cotraseña
+        remember()
+    } )
 
     return containerLogin;
 }
