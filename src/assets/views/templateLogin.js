@@ -34,7 +34,7 @@ export const templateLogin =()=>{
         let email = document.getElementById('user').value;
         //recordar cotraseña
         remember(email);
-        console.log('probando');
+        //console.log('probando');
     } )
 
     return containerLogin;

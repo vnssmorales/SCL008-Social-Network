@@ -33,6 +33,7 @@ main .container {
     background: blue;
 }
 
+
 #create {
     display: flex;
     flex-wrap: wrap;
@@ -84,8 +85,9 @@ main .container {
     position: relative;
     margin: 30px;
     margin-bottom: 19px;
-    border: 1px solid black;
-    padding: 30px ;
+    border-bottom: 1px solid black;
+    padding-top: 10%;
+    padding: 20px ;
   }
  
 .btn-create {

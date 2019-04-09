@@ -65,7 +65,12 @@ export const createAccount = (userName,email,password) => {
         });
       } else {
         // No user is signed in.
-      }
+      }firebase.database().ref('users/' + userId).set({
+        username: name,
+        email: email,
+        profile_picture : imageUrl
+      });
+    
     });
     
     // [END createwithemail]
