@@ -1,4 +1,3 @@
-
 export const loginGoogle = () =>{
   var provider = new firebase.auth.GoogleAuthProvider();
   firebase.auth().signInWithPopup(provider).then(function(result) {
@@ -6,6 +5,20 @@ export const loginGoogle = () =>{
       var token = result.credential.accessToken;
       // The signed-in user info.
       var user = result.user;
+      //console.log(user);
+      //const userName = user.displayName;
+      firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+          //console.log(user.uid);
+          firebase.database().ref('users/'+ user.uid).set({
+            displayName: user.displayName,
+            email: user.email,
+          });
+        } else {
+          // No user is signed in.
+        }
+      });
+    //console.log(userName);
       // ...
     }).catch(function(error) {
       // Handle Errors here.
@@ -26,7 +39,7 @@ export const logOut = () =>{
     });
   }
 
-export const createAccount = (userName,userLastName,email,password) => {
+export const createAccount = (userName,email,password) => {
 
   firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
       // Handle Errors here.
@@ -42,13 +55,13 @@ export const createAccount = (userName,userLastName,email,password) => {
       console.log(error);
       // [END_EXCLUDE]
     });
+
     firebase.auth().onAuthStateChanged(function(user) {
       if (user) {
         //console.log(user.uid);
         firebase.database().ref('users/'+ user.uid).set({
-          username: userName,
-          userlastname: userLastName,
-          email: email,
+          displayName: userName,
+          email: user.email,
         });
       } else {
         // No user is signed in.
@@ -61,9 +74,7 @@ export const createAccount = (userName,userLastName,email,password) => {
 }
 
 
-export function writeUserData(userName,userLastName,email) {
-  
-  }
+
 
 
 
@@ -96,4 +107,3 @@ export const createPost = () => {
 
   return 'escribe tu post'
 }
-

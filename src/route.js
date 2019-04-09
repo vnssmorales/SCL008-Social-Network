@@ -1,7 +1,6 @@
 import {templateLogin} from './assets/views/templateLogin.js'
 import {templateCreate} from './assets/views/templateCreate.js'
 import {templateCreatePost} from './assets/views/templateCreatePost.js'
-//import {templateLogOut} from './assets/views/templateLogOut.js'
 import {templateHome} from './assets/views/templateHome.js'
 import {templateAbout} from './assets/views/templateAbout.js'
 

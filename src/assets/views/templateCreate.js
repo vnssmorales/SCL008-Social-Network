@@ -6,8 +6,7 @@ export const templateCreate =()=>{
 
     const contentCreate = `<p>Crear Cuenta</p>
                             <div class = "container">
-                            <div class="input">  <input id="name" type="name" placeholder="Nombre"> </div>
-                            <div class="input">  <input id="lastname" type="lastname" placeholder="ingresar apellido"> </div>
+                            <div class="input">  <input id="name" type="name" placeholder="Nombre y Apellido"> </div>
                             <div class="input">  <input id="email" type="email" placeholder="ingresar email"> </div>
                             <div class="input">  <input id="password" type="password" placeholder="ingresar contraseña"> </div>
                             <div class="btn-create"> <button class="btn" id="create">Crear tu cuenta en Walk Chile</button> </div>
@@ -21,10 +20,9 @@ export const templateCreate =()=>{
 
     btn.addEventListener('click',()=>{
     let userName = document.getElementById('name').value;
-    let userLastName = document.getElementById('lastname').value;
     let email = document.getElementById('email').value;
     let password = document.getElementById('password').value;
-    validate(userName,userLastName,email,password);
+    validate(userName,email,password);
     })
     return containerCreate;  
 }
