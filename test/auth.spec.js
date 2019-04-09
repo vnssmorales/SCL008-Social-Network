@@ -6,8 +6,10 @@
 //     })
 //   });
 
-import {validar} from './../src/assets/js/validation.js'
+import {validate} from './../src/assets/js/validation.js'
 
-describe ('validate',()=> {
-    it ('deberia retornar')
-})
+describe ('validate',()=>{
+    it ('deberia retornar falso si es que no ingresa nombre, correo y contraseña', () =>{
+        expect(validate("","","")).toBe(false);
+    })
+});
