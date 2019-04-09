@@ -15,7 +15,7 @@
 
     #tittle label {
         display: block;
-        background: rgb(128, 128, 224);
+        background: rgb(0,0,0);
     }
  
     .input {
@@ -32,7 +32,7 @@
 
     .menu {
        position: absolute;
-       background: rgb(128, 128, 224);
+       background: rgb(0,0,0);
        width: 100%;
        margin-left: -100%;
        transition: all 0.5s;
@@ -52,6 +52,9 @@
 
 }
 
-@media (max-width:1024px) {
-    
+@media (max-width:1440px) {
+    #infofoto {
+        height: auto;
+        max-width: 100%;
+    }
 }
