@@ -108,10 +108,19 @@ export const createPost = () => {
   return 'escribe tu post'
 }
 
+<<<<<<< Updated upstream
 //recodar contraseña
 export const remember = (email) => {
 var auth = firebase.auth();
 auth.sendPasswordResetEmail(email).then(function() {
+=======
+//recordar contraseña
+export const remember = () => {
+  var auth = firebase.auth();
+var emailAddress = "user@example.com";
+
+auth.sendPasswordResetEmail(emailAddress).then(function() {
+>>>>>>> Stashed changes
   // Email sent.
 }).catch(function(error) {
   // An error happened.
