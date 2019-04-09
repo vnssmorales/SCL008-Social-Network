@@ -2,6 +2,12 @@
 
   @media (max-width:768px) {
 
+    body, html {
+        min-height: 100vh;
+        flex-direction: column;
+        display: flex;
+    }
+
     header {
       flex-direction: row;
       text-align: center;
@@ -44,4 +50,8 @@
         margin: 0;
     }
 
+}
+
+@media (max-width:1024px) {
+    
 }
