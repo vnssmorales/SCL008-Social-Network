@@ -1,35 +1,35 @@
 export const loginGoogle = () =>{
   var provider = new firebase.auth.GoogleAuthProvider();
-  firebase.auth().signInWithPopup(provider).then(function(result) {
+  firebase.auth().signInWithRedirect(provider);
+  firebase.auth().getRedirectResult().then(function(result) {
+    if (result.credential) {
       // This gives you a Google Access Token. You can use it to access the Google API.
       var token = result.credential.accessToken;
-      // The signed-in user info.
-      var user = result.user;
-      //console.log(user);
-      //const userName = user.displayName;
-      firebase.auth().onAuthStateChanged(function(user) {
-        if (user) {
-          //console.log(user.uid);
-          firebase.database().ref('users/'+ user.uid).set({
-            displayName: user.displayName,
-            email: user.email,
-          });
-        } else {
-          // No user is signed in.
-        }
-      });
-    //console.log(userName);
       // ...
-    }).catch(function(error) {
-      // Handle Errors here.
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      // The email of the user's account used.
-      var email = error.email;
-      // The firebase.auth.AuthCredential type that was used.
-      var credential = error.credential;
-      // ...
+    }
+    // The signed-in user info.
+    var user = result.user;
+    firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    //console.log(user.uid);
+    firebase.database().ref('users/'+ user.uid).set({
+      displayName: user.displayName,
+      email: user.email,
     });
+  } else {
+    // No user is signed in.
+  }
+});
+  }).catch(function(error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    // The email of the user's account used.
+    var email = error.email;
+    // The firebase.auth.AuthCredential type that was used.
+    var credential = error.credential;
+    // ...
+  });
 }
 export const logOut = () =>{
   firebase.auth().signOut().then(function() {
@@ -73,11 +73,6 @@ export const createAccount = (userName,email,password) => {
   return 'cuenta creada ok'
 }
 
-
-
-
-
-
 export const userActive = () =>{
   let userRegistered = document.getElementById('user').value;
   let key = document.getElementById('pass').value;
@@ -109,11 +104,9 @@ export const createPost = () => {
 }
 
 //recodar contraseña
-export const remember = () => {
-  var auth = firebase.auth();
-var emailAddress = "user@example.com";
-
-auth.sendPasswordResetEmail(emailAddress).then(function() {
+export const remember = (email) => {
+var auth = firebase.auth();
+auth.sendPasswordResetEmail(email).then(function() {
   // Email sent.
 }).catch(function(error) {
   // An error happened.

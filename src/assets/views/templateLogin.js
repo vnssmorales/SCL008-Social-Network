@@ -1,7 +1,5 @@
 import {loginGoogle,userActive,remember} from '../js/auth.js'
 
-
-
 export const templateLogin =()=>{
 // creamos div que contendrá la plantilla
     const containerLogin = document.createElement('div');
@@ -33,8 +31,10 @@ export const templateLogin =()=>{
      })
 
     btn3.addEventListener('click',()=>{
+        let email = document.getElementById('user').value;
         //recordar cotraseña
-        remember()
+        remember(email);
+        console.log('probando');
     } )
 
     return containerLogin;
