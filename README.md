@@ -14,7 +14,7 @@ Walk Chile, es una red social para tod@ viajer@, Te invitamos a usar la nueva ap
 
 Comenzámos trabajando en base a historias de usuarios acotadas. Usamos Trello para organizarnos. La app se desarrolló con Javascript, Css, FireBase de Google, se realizó en SPA (Single-Page application)
 
-Flujo de la app
+## Flujo de la APP
 ![flujo.jpg](https://github.com/TatianaCastroLizama/SCL008-Social-Network/blob/master/src/img/flujo.jpg)
 
 Protitpo de alta fidelidad
