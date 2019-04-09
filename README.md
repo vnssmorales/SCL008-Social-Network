@@ -8,7 +8,7 @@ Walk Chile, es una red social para tod@ viajer@, Te invitamos a usar la nueva ap
 
 
 
-![ViajaxChile.jpg](https://github.com/TatianaCastroLizama/SCL008-data-lovers/blob/master/src/img/ViajaxChile.jpg)
+![ViajaxChile.JPG](https://github.com/TatianaCastroLizama/SCL008-data-lovers/blob/master/src/img/ViajaxChile.JPG)
 
 ## Informacion sobre el proceso
 
