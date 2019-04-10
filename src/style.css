@@ -81,17 +81,18 @@ main .container {
 #input {
     display: flex;
     float: left;
-    width: 80%;
+    
     position: relative;
     margin: 30px;
     margin-bottom: 19px;
     border-bottom: 1px solid black;
     padding-top: 10%;
     padding: 20px ;
+    width: 250px;
+    height: 30px;
   }
  
 .btn-create {
-
     width: 80%;
     margin: 30px;
     margin-bottom: 19px;
@@ -115,27 +116,36 @@ main .container {
       background: rgb(102, 102, 214);
       color: #fff;
       border-radius: 5px;
+      width: 250px;
+      height: 40px;
   }
 
 
 #infofoto {
+    text-align: center;
     height: auto;
     max-width: 100%;
+    padding: 20px;
 }
 
-footer .container {
+#infofoto img {
+    font-size: 20px;
+}
+
+#infofoto h4 {
+    margin: 20px;
+    text-align: left;
+}
+
+footer .container{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 100%;
-    padding:2px;
-    border:1px;
-    margin:2px; 
-    position: fixed;
-    left: 0;
+    background-color:  #000;
+    padding-left: 4%;
     bottom: 0;
-    border-top:1px solid black;
-    background: #000;
+    position: fixed;
+    width: -webkit-fill-available;
     color: #fff;
 }
 
