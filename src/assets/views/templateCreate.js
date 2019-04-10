@@ -5,7 +5,7 @@ export const templateCreate =()=>{
     const containerCreate = document.createElement('div');
 
     const contentCreate = `<p>Crear Cuenta</p>
-                            <div class = "container">
+                            <div class = "container" id="registry">
                             <div class="input">  <input id="name" type="name" placeholder="Nombre y Apellido"> 
                             <p class="error" id="errorname"></p></div>
                             <div class="input">  <input id="email" type="email" placeholder="ingresar email"> 
