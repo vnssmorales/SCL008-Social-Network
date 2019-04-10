@@ -64,10 +64,13 @@ main .container {
 
 .menu li {
     border-left: 1px solid #fff;
+    
+    
 }
 
 .menu li:hover {
     background: rgba(0, 0, 0, 0.3);
+    
 }
 
 .menu li a {
