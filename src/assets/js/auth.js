@@ -115,23 +115,16 @@ auth.sendPasswordResetEmail(email).then(function() {
 });
 }
 
-//check de post
-// export const wall = () =>{
+export const showuser = () =>{
+var user = firebase.auth().currentUser;
+var name, email;
 
-//   const post = () => {
-//     document.getElementById('post').addEventListener('click'() =>{
-//   let checkPostOne = document.getElementsById('cbox1').checked;
-//   let checkPostTwo = document.getElementById('cbox2').checked;
-//   let postResult = '';
-  
-  
-//  if (checkPostOne==true) {
-//  postResult += 'Solicitas Recomendación para tu viaje <br>';
-//  }
-//  if (checkPostTwo==true){
-//    postResult += 'Entregarás recomendaciones para tu viaje';
-//  }
-//  document.getElementById('postResult').innerHTML = checkResult;
-//     )};
-// }
-// }
+if (user != null) {
+  name = user.displayName;
+  email = user.email;
+
+ // The user's ID, unique to the Firebase project. Do NOT use
+                   // this value to authenticate with your backend server, if
+                   // you have one. Use User.getToken() instead.
+}
+}

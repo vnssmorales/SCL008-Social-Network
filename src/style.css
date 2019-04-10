@@ -16,6 +16,15 @@ body {
     image-rendering: pixelated;
 }  
 
+.logo2 {
+    height: 50px;
+    image-rendering: auto;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    text-align: left;
+}  
+
+
 header {
     width: 100%;  
 }
