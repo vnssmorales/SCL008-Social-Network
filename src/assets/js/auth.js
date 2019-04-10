@@ -120,3 +120,24 @@ auth.sendPasswordResetEmail(email).then(function() {
   // An error happened.
 });
 }
+
+//check de post
+export const wall = () =>{
+
+  const post = () => {
+    document.getElementById('post').addEventListener('click'() =>{
+  let checkPostOne = document.getElementsById('cbox1').checked;
+  let checkPostTwo = document.getElementById('cbox2').checked;
+  let postResult = '';
+  
+  
+ if (checkPostOne==true) {
+ postResult += 'Solicitas Recomendación para tu viaje <br>';
+ }
+ if (checkPostTwo==true){
+   postResult += 'Entregarás recomendaciones para tu viaje';
+ }
+ document.getElementById('postResult').innerHTML = checkResult;
+    )};
+}
+}
