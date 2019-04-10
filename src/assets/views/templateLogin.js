@@ -5,15 +5,17 @@ export const templateLogin =()=>{
 // creamos div que contendrá la plantilla
     const containerLogin = document.createElement('div');
     // creamos el contenido del login
-    const contentLogin = `<p>Ingresa con tu cuenta Google</p>
-                         <button class="btn" id="login">Link a Google</button>
+    const contentLogin = ` <div class="container" id="loginreg">
+                          <p>Ingresa con tu cuenta Google</p>
+                          <div class="btn-login"> <button class="btn" id="login">Link a Google</button> </div>
                           <br></br>
                           <div class="input"> <input id="user" type="user" placeholder="ingresa usuario"> 
                           <p class="error" id="errorNameActive"> </div>
                           <div class="input"> <input id="pass" type="password" placeholder="ingresar contraseña">
                           <p class="error" id="errorPassActive"></p> </div>
                           <div class="btn-ingresar"> <button class="btn" id="userActive">Ingresar</button> 
-                          <div class="btn-recordar"> <button class="btn" id="userremember">Recordar contraseña</button>`
+                          <div class="btn-recordar"> <button class="btn" id="userremember">Recordar contraseña</button>
+                          </div>`
 //pasar el contenido al div
     containerLogin.innerHTML=contentLogin;
 //le pido que busque el id del bton dentro del div creado
