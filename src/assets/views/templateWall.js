@@ -1,3 +1,5 @@
+import { showuser } from "../js/auth";
+
 //import{logOut} from './../js/auth.js';
 //import{wall} from './../js/auth.js';
 //export const templateLogOut =() => {
@@ -15,15 +17,15 @@
 //}
 
 
-//export const templateProfile =()=>{
-//    const containerProfile = document.createElement('div');
-    //aqui poner el nombre y foto del perfil de usuario
-    //const contentProfile = ``
- //   containerProfile.innerHTML=contentProfile;
-
- //   return containerProfile;  
-//}
+export const templateProfile =()=>{
+    showuser(name);
+    const containerLogo = document.getElementById('logo2');
+    const contentLogo= `<img src="./img/LogoChile.png" class="logo2" /><div id="nameuser">${name}</div>`
+    containerLogo.innerHTML=contentLogo;
+     
+}
 export const templateWall =()=>{
+    templateProfile();
     // creamos div que contendrá la plantilla
         const containerWall = document.createElement('div');
         
