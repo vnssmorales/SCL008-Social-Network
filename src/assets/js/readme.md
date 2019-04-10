@@ -2,7 +2,7 @@
 
 ## Walk Chile
 
-Para tod@s viajeros
+Walk Chile, es una red social para tod@ viajer@, Te invitamos a usar la nueva aplicación para saber todo sobre lugares de Chile, actividades, hospedaje, y tips para preparar tu viaje. Si es primera vez que viajas, inicia una nueva conversación dónde puedes pedir recomendaciones para tu primer viaje. Si ya eres viajero frecuente, comparte tus historias y datos imperdibles!
 
 ![web.jpg](https://github.com/TatianaCastroLizama/SCL008-data-lovers/blob/master/src/imagen/web.jpg)
 ## Informacion sobre el proceso
@@ -24,7 +24,7 @@ Luego de tomar la decisión respecto a cual sería nuestra data el primer paso f
 ## Quienes son los usuarios
 
 
-Los usuarios de "Walk Chile" son todos aquellos viajeros y nuevos viajeros que quieran saber datos sobre alojamiento, donde comer,
+Los usuarios de "Walk Chile" son todos aquellos viajeros que quieran saber datos sobre alojamiento, donde comer, lugares imperdibles y todos los tips sobre este hermoso país que es Chile. Desde la misma experiencia de otros vajeros. Si planeas tu primer viaje, puedes pedir todas las recomendaciones que necesites o compartir tus mejores vivencias con la comunidad. 
 
 
 ## Cómo el producto soluciona los problemas/necesidades de los usuarios.
