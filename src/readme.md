@@ -45,9 +45,6 @@ Vimos esta necesidad de viajeros frecuentes y nuevos viajeros de pedir o dar rec
 
 
 
-
-
-
 #### Testeos de usabilidad
 
 
