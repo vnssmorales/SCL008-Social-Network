@@ -1,34 +1,33 @@
-import{logOut} from './../js/auth.js';
-import{wall} from './../js/auth.js';
-export const templateLogOut =() => {
-    const containerLogOut = document.createElement('div');
-    const contentlogOut = `<p>Desloguearse</p>
-                           <button class="btn" id="logOut">Desloguearse</button>`
-    containerLogOut.innerHTML = contentlogOut;
-    const btn=containerLogOut.querySelector('#logOut');
-    btn.addEventListener('click',()=>{
-        logOut();
+//import{logOut} from './../js/auth.js';
+//import{wall} from './../js/auth.js';
+//export const templateLogOut =() => {
+ //   const containerLogOut = document.createElement('div');
+ // const contentlogOut = `<p>Desloguearse</p>
+  //                         <button class="btn" id="logOut">Desloguearse</button>`
+ //   containerLogOut.innerHTML = contentlogOut;
+ //   const btn=containerLogOut.querySelector('#logOut');
+ //   btn.addEventListener('click',()=>{
+//        logOut();
             
-})
+//})
 //hacer q returne al HOme¿?
 //return containerLogOut;
-}
+//}
 
 
-export const templateProfile =()=>{
-    const containerProfile = document.createElement('div');
+//export const templateProfile =()=>{
+//    const containerProfile = document.createElement('div');
     //aqui poner el nombre y foto del perfil de usuario
     //const contentProfile = ``
-    containerProfile.innerHTML=contentProfile;
+ //   containerProfile.innerHTML=contentProfile;
 
-    return containerProfile;  
-}
-
-export const wall =()=>{
+ //   return containerProfile;  
+//}
+export const templateWall =()=>{
     // creamos div que contendrá la plantilla
         const containerWall = document.createElement('div');
-        // creamos el contenido del login
-        const containerWall=`<div id= postwall class="boxPost">
+        
+        const contentWall=`<div id= postwall class="boxPost">
                             <input type="checkbox" id="cbox1" value="first_checkbox">Solicitar Recomendación</input><br>
                             <input type="checkbox" id="cbox2" value="second_checkbox">Publicar una Recomendación</input>
 
@@ -54,4 +53,6 @@ export const wall =()=>{
                             </select>
                             <button class="btnpost" id="post">Postear</button>
                             </div>`
+            containerWall.innerHTML=contentWall;
+            return containerWall;
 }

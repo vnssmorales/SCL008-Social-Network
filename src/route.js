@@ -1,8 +1,8 @@
 import {templateLogin} from './assets/views/templateLogin.js'
 import {templateCreate} from './assets/views/templateCreate.js'
-import {templateCreatePost} from './assets/views/templateCreatePost.js'
 import {templateHome} from './assets/views/templateHome.js'
 import {templateAbout} from './assets/views/templateAbout.js'
+import {templateWall} from './assets/views/templateWall.js'
 
 /*
 crear una funcion que reciba el hast y segun el match retorne otra funcion que va a imprimir el template en el html
@@ -18,7 +18,7 @@ const changeRouter = (hash) =>{
     if (hash==='#/create'){
         return showTemplate(hash);
     }
-    if (hash==='#/createPost'){
+    if (hash==='#/wall'){
         return showTemplate(hash);
     }
     if (hash==='#/about'){
@@ -43,8 +43,8 @@ break;
 case 'create':
 containterRoot.appendChild(templateCreate());
 break;
-case 'createPost':
-containterRoot.appendChild(templateCreatePost());
+case 'wall':
+containterRoot.appendChild(templateWall());
 break;
 case 'about':
 containterRoot.appendChild(templateAbout());
