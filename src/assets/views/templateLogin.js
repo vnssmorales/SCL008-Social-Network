@@ -1,4 +1,5 @@
 import {loginGoogle,userActive,remember} from '../js/auth.js'
+import {validateUserActive} from '../js/validation.js'
 
 export const templateLogin =()=>{
 // creamos div que contendrá la plantilla
@@ -7,8 +8,10 @@ export const templateLogin =()=>{
     const contentLogin = `<p>Ingresa con tu cuenta Google</p>
                          <button class="btn" id="login">Link a Google</button>
                           <br></br>
-                          <div class="input"> <input id="user" type="user" placeholder="ingresa usuario"> </div>
-                          <div class="input"> <input id="pass" type="password" placeholder="ingresar contraseña"> </div>
+                          <div class="input"> <input id="user" type="user" placeholder="ingresa usuario"> 
+                          <p class="error" id="errorNameActive"> </div>
+                          <div class="input"> <input id="pass" type="password" placeholder="ingresar contraseña">
+                          <p class="error" id="errorPassActive"></p> </div>
                           <div class="btn-ingresar"> <button class="btn" id="userActive">Ingresar</button> 
                           <div class="btn-recordar"> <button class="btn" id="userremember">Recordar contraseña</button>`
 //pasar el contenido al div
@@ -25,7 +28,18 @@ export const templateLogin =()=>{
     })
 
     btn2.addEventListener('click',()=>{
-         userActive();
+        let nameActive = document.getElementById('user').value;
+        let passActive = document.getElementById('pass').value;
+        if (nameActive ==="") {
+            document.getElementById('errorNameActive').innerHTML =`Debe ingresar un email ya registrado`
+        }
+        if (passActive ==="") {
+            document.getElementById('errorPassActive').innerHTML = `Por favor ingrese la contraseña`
+        }
+        if (validateUserActive(nameActive,passActive)) {
+            userActive(nameActive,passActive);
+        }   
+         
      })
 
     btn3.addEventListener('click',()=>{

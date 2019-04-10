@@ -13,3 +13,11 @@ export const validateEmail = (email) => {
     return pattern.test(email);
   }
   
+export const validateUserActive = (nameActive,passActive) =>{
+    if (nameActive===""||passActive===""){
+        return false;
+    }
+    else {
+        return true;
+    }
+}

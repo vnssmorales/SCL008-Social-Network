@@ -31,7 +31,7 @@ export const templateWall =()=>{
                             <input type="checkbox" id="cbox1" value="first_checkbox">Solicitar Recomendación</input><br>
                             <input type="checkbox" id="cbox2" value="second_checkbox">Publicar una Recomendación</input>
 
-                            </div><div class="input"> <input id="post" type="text" placeholder="Escribe tu post"> </div>
+//                             </div><div class="input"> <input id="post" type="text" placeholder="Escribe tu post"> </div>
                             
                             <select id="regiones">
                             <option value="I">I Tarapacá</option>

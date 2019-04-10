@@ -6,7 +6,7 @@
 //     })
 //   });
 
-import {validate,validateEmail} from './../src/assets/js/validation.js'
+import {validate,validateEmail,validateUserActive} from './../src/assets/js/validation.js'
 
 describe ('validate',()=>{
     it ('deberia retornar falso si es que no ingresa nombre, correo y contraseña', () =>{
@@ -22,3 +22,11 @@ describe ('validateEmail',()=>{
         expect(validateEmail('karen.reyes.c@gmail.com')).toBe(true);
     })
 });
+
+describe ('validateUserActive',()=>{
+    it ('deberia retornar falso si es que no ingresa correo y contraseña registrados', () =>{
+        expect(validateUserActive("","")).toBe(false);
+    })
+});
+
+
