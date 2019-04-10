@@ -40,6 +40,7 @@ export const templateLogin =()=>{
         }
         if (validateUserActive(nameActive,passActive)) {
             userActive(nameActive,passActive);
+            window.location.hash='#/wall';
         }   
          
      })

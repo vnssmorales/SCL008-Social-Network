@@ -116,15 +116,10 @@ auth.sendPasswordResetEmail(email).then(function() {
 }
 
 export const showuser = () =>{
-var user = firebase.auth().currentUser;
-var name, email;
-
-if (user != null) {
-  name = user.displayName;
-  email = user.email;
-
- // The user's ID, unique to the Firebase project. Do NOT use
-                   // this value to authenticate with your backend server, if
-                   // you have one. Use User.getToken() instead.
-}
+  // //var userId = firebase.auth().currentUser.uid;
+  // return firebase.database().ref('/users/' + userId).once('value').then(function(snapshot) {
+  //   var username = (snapshot.val() && snapshot.val().username) || 'Anonymous';
+  //   // ...
+  // });
+  // console.log(username);
 }

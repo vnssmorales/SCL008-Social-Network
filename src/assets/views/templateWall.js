@@ -1,27 +1,18 @@
-import { showuser } from "../js/auth";
+import {showuser} from './../js/auth.js'
 
-//import{logOut} from './../js/auth.js';
-//import{wall} from './../js/auth.js';
-//export const templateLogOut =() => {
- //   const containerLogOut = document.createElement('div');
- // const contentlogOut = `<p>Desloguearse</p>
-  //                         <button class="btn" id="logOut">Desloguearse</button>`
- //   containerLogOut.innerHTML = contentlogOut;
- //   const btn=containerLogOut.querySelector('#logOut');
- //   btn.addEventListener('click',()=>{
-//        logOut();
-            
-//})
-//hacer q returne al HOme¿?
-//return containerLogOut;
-//}
-
+import{logOut} from './../js/auth.js';
 
 export const templateProfile =()=>{
-    showuser(name);
+    showuser();
     const containerLogo = document.getElementById('logo2');
-    const contentLogo= `<img src="./img/LogoChile.png" class="logo2" /><div id="nameuser">${name}</div>`
+    const contentLogo= `<img src="./img/LogoChile.png" class="logo2" /><div id="nameuser">${name}</div>
+    <p>Desloguearse</p>                       <button class="btn" id="logOut">Desloguearse</button>`
     containerLogo.innerHTML=contentLogo;
+    const btn=containerLogo.querySelector('#logOut');
+    btn.addEventListener('click',()=>{
+                logOut();window.location.hash='#/home';
+                    
+        })
      
 }
 export const templateWall =()=>{
