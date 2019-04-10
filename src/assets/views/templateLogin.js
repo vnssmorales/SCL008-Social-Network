@@ -21,6 +21,7 @@ export const templateLogin =()=>{
 
     btn.addEventListener('click',()=>{    
         loginGoogle();
+        window.location.hash='#/wall';
     })
 
     btn2.addEventListener('click',()=>{
