@@ -153,6 +153,11 @@ footer .container {
     font-size: 20px;
 }
 
+.error{
+    color:red;
+    text-align: center;
+}
+
   /*#img-menu {
       float: left;
   }
@@ -204,5 +209,6 @@ footer{
     position: absolute;
     width: 80%;
 }
+
 
 */

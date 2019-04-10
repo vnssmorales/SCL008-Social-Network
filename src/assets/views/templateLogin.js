@@ -21,20 +21,15 @@ export const templateLogin =()=>{
 
     btn.addEventListener('click',()=>{    
         loginGoogle();
-       
-
     })
 
     btn2.addEventListener('click',()=>{
-        //console.log('prueba')
          userActive();
      })
 
     btn3.addEventListener('click',()=>{
         let email = document.getElementById('user').value;
-        //recordar cotraseña
         remember(email);
-        //console.log('probando');
     } )
 
     return containerLogin;
