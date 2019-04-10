@@ -17,7 +17,7 @@ Comenzámos trabajando en base a historias de usuarios acotadas. Usamos Trello p
 ![trello.jpg](https://github.com/TatianaCastroLizama/SCL008-Social-Network/blob/master/src/img/trello.jpg)
 
 ### Flujo de la app
-![flujo.jpg](https://github.com/TatianaCastroLizama/SCL008-Social-Network/blob/master/src/img/flujo.jpg)
+
 
 ### Protitpo de alta fidelidad
 ![figma.jpg](https://github.com/TatianaCastroLizama/SCL008-Social-Network/blob/master/src/img/figma.jpg)
