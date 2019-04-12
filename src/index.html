@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Walk Chile</title>
     <link rel="shortcut icon" href="./img/LogoChile.png">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="flexboxgrid.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="media.css  ">
 </head>
@@ -15,44 +15,33 @@
 
 <body>
     <header>
-     <div class="logo-menu" id="logo2"> 
-         <div class="container">
-             <div class="row">
-               <div class="logo">
-                    <img src="./img/LogoChile.png" class="logo"/>
-               </div>  
-               <nav class="menu">
-                    <a href="#/home">Inicio</a>
-                    <a href="#/create">Registro</a>
-                    <a href="#/login">Ingreso</a>
-                    <a href="#/about">Nosotros</a>
-               </nav>
-             </div>
-         </div>
-     </div> 
-    </header>
-
-
-    <main>
-        <div class="container" id="tittle">
-            <nav class="menu">
-                <ul>
-                    <li><a href="#/home">Inicio</a></li>
-                    <li><a href="#/create">Registro</a></li>
-                    <li><a href="#/login">Ingreso</a></li>
-                    <li><a href="#/about">Nosotros</a></li>
-                </ul>
-            </nav>
+        <div class="logo-menu" id="logo2">
+            <div class="container">
+                <div class="row middle-xs between-xs">
+                    <div class="logo col-xs-12 col-sm-4 center-xs start-xs">
+                        <img src="./img/LogoChile.png" id="logo" />
+                    </div>
+                    <nav class="menu col-xs-12 col-sm-8 center-xs end-sm">
+                        <a href="#/home">Inicio</a>
+                        <a href="#/create">Registro</a>
+                        <a href="#/login">Ingreso</a>
+                        <a href="#/about">Nosotros</a>
+                    </nav>
+                </div>
+            </div>
         </div>
+    </header>
+    <main>
+
     </main>
-    
+
     <div id="root"> </div>
 
     <footer>
         <div class="container">
-            
+
             <h3 class="copy">WalkChile.cl &copy; 2019</h3>
-        
+
             <div class="sociales">
                 <p>La red social de todo viajero por Chile </p>
             </div>
@@ -61,7 +50,7 @@
             </div>
         </div>
     </footer>
-    
+
     <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-auth.js"></script>

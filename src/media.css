@@ -1,9 +1,5 @@
 
 @media (min-width:480px) {
-    #infofoto img {
-        font-size: 48px;
-    }
-}
 
   @media (max-width:768px) {
 
@@ -38,16 +34,6 @@
       justify-content: center;
       align-items: start;
     }
-
-     
-    #infofoto {
-        height: 300px;
-        overflow: hidden;
-    }
-
-    #infofoto img {
-        height: auto;
-    }
          
 }
 
@@ -58,8 +44,4 @@
         text-align: center;
     }
     
-    #infofoto img {
-        font-size: 60px;
-        
-    }
 }
