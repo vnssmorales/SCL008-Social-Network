@@ -13,6 +13,7 @@ export const templateCreate =()=>{
                             <div class="input">  <input id="password" type="password" placeholder="ingresar contraseña">
                             <p class="error" id="errorpass"></p></div>
                             <div class="btn-create"> <button class="btn" id="create">Crear tu cuenta en Walk Chile</button> </div>
+                            <button class="btn" id="profile"><a href="profile">perfil<a></button> </div>
                             </div>`
                             
 
@@ -38,5 +39,7 @@ export const templateCreate =()=>{
     createAccount(userName,email,password);
 }
     })
+
+
     return containerCreate;  
 }

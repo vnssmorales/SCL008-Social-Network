@@ -1,5 +1,14 @@
 
-/*@media (min-width:480px) {
+@media (min-width:480px) {
+    #infofoto img {
+        font-size: 48px;
+    }
+    #fotoinicio{
+        height: 5%;
+        display: block;
+    }
+}
+
 
   @media (max-width:768px) {
 

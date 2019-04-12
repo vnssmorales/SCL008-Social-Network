@@ -1,3 +1,4 @@
+
 /*export const templateProfile = () => {
     //creamos div que contendrá la plantilla
     const container = document.createElement('div');
@@ -36,3 +37,4 @@ if (user != null) {
   photoUrl = user.photoURL;
   emailVerified = user.emailVerified;
   uid = user.uid;  */
+
