@@ -4,17 +4,30 @@ export const templateCreate =()=>{
 
     const containerCreate = document.createElement('div');
 
-    const contentCreate = `<p>Crear Cuenta</p>
-                            <div class = "container" id="registry">
+    const contentCreate = ` <main>
+                        <div class = "createAccount">
+                        <h3>Crear Cuenta</h3>
+                         <div class = "container" id="registry">
+                         <div class="row middle-xs between-xs">
+                         <div class="accountCreate col-xs-12 col-sm-8 center-xs">
                             <div class="input">  <input id="name" type="name" placeholder="Nombre y Apellido"> 
-                            <p class="error" id="errorname"></p></div>
+                            <p class="error" id="errorname"></p>
+                            </div>
                             <div class="input">  <input id="email" type="email" placeholder="ingresar email"> 
-                            <p class="error" id="erroremail"></p></div>
+                            <p class="error" id="erroremail"></p>
+                            </div>
                             <div class="input">  <input id="password" type="password" placeholder="ingresar contraseña">
-                            <p class="error" id="errorpass"></p></div>
+                            <p class="error" id="errorpass"></p>
+                            </div>
+                            </div>
+                            <div class="accountCreate col-xs-12 col-sm-4 center-xs">
                             <div class="btn-create"> <button class="btn" id="create">Crear tu cuenta en Walk Chile</button> </div>
-                            <button class="btn" id="profile"><a href="profile">perfil<a></button> </div>
-                            </div>`
+                           
+                            </div>
+                          </div>
+                         </div>
+                        </div>
+                            </main>`
                             
 
     containerCreate.innerHTML=contentCreate;
