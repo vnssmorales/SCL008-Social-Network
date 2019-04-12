@@ -3,13 +3,40 @@
 * {
     margin: 0;
     padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
 }
 
 body {
     font-family: 'Open Sans', sans-serif;
 }
 
-.logo {
+header {
+    color: #fff;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.logo-menu {
+    background: rgb(87, 81, 81);
+}
+
+.logo-menu .menu a {
+    display: inline-block;
+    padding: 20px 10px;
+}
+
+.logo-menu .menu a:hover{
+    border-bottom: 4px solid rgb(182, 30, 3);
+    padding-bottom: 36px;
+}
+
+#logo {
     height: 90px;
     image-rendering: auto;
     image-rendering: crisp-edges;
@@ -24,15 +51,18 @@ body {
     text-align: left;
 }  
 
-
-header {
-    width: 100%;  
+.main {
+    margin: 20px 0;
 }
 
-main {
-    box-sizing: border-box;
-    flex: 1;
-  }
+.main .foto {
+    margin-bottom: 20px;
+}
+
+.main .foto img {
+    width: 100%;
+    vertical-align: top;
+}
 
 #registry {
     width: auto;
@@ -52,51 +82,7 @@ main {
     text-align: center;
     align-items: center;
     border:  1px solid #000;
-}
-
-#boton-menu {
-      display: none;
-  }
-
-#title {
-    background: blue;
-}
-
-#tittle label {
-      display: none;
-      width: 30px;
-      right: 30px;
-      cursor: pointer;
-      border-left: 1px solid #fff;
-  }
-#tittle label:hover {
-      cursor: pointer;
-      background: rgba(0, 0, 0, 0.3);
-  }
-
-.menu ul {
-      margin: 0;
-      list-style: none;
-      padding: 0;
-      display: flex;
-      justify-content: flex-end;
-  }
-
-.menu li {
-    border-left: 1px solid #fff;
-}
-
-.menu li:hover {
-    background: rgba(0, 0, 0, 0.3);
-}
-
-.menu li a {
-    display: block;
-    padding: 20px 20px;
-    color: #fff;
-    text-decoration: none;
-    background: rgb(38, 38, 41);
-}
+}  
 
 .input {
     display: flex;
@@ -109,50 +95,32 @@ main {
   }
 
   .btn {
-      background: rgb(102, 102, 214);
+      background: rgb(30, 30, 31);
       color: #fff;
-      border-radius: 5px;
+      border-radius: 0 30px 0 30px;
       width: 120px;
       height: 40px;
   }
 
 
-#infofoto {
-    text-align: center;
-    height: auto;
-    max-width: 100%;
-    padding: 20px;
+footer {
+    background: rgb(87, 81, 81);
+    padding: 20px 0;
 }
 
-#infofoto img {
-    font-size: 20px;
-}
-
-#infofoto h4 {
-    margin: 20px;
-    text-align: left;
-}
-
-footer .container{
-    display: flex;
-    flex-wrap: wrap;
-    background-color:  #000;
-    color: #fff;
-    justify-content: center;
-}
-
-.sociales {
-    width: 100%;
+footer p {
     text-align: center;
 }
 
-.help {
+#help {
     width: 100%;
     text-align: right;
+    
 }
 
 .copy {
-    font-size: 20px;
+    width: 100%;
+    text-align: center;
 }
 
 .error{

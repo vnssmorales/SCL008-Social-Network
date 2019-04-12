@@ -34,7 +34,7 @@ const changeRouter = (hash) =>{
 }
 //imprimira el template en el html
 const showTemplate = (hash) =>{
-const router=hash.substring(2);
+const router=hash.substring(2); //para que saque el # y tome solo login no #login
 let containterRoot = document.getElementById("root");
 containterRoot.innerHTML='';
 

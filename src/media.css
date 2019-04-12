@@ -9,18 +9,10 @@
     }
 }
 
+
   @media (max-width:768px) {
 
-    body, html {
-        min-height: 100vh;
-        flex-direction: column;
-        display: flex;
-    }
-
-    header {
-      flex-direction: row;
-      text-align: center;
-    }
+    
 
     #logo2{
         text-align: left;
@@ -47,54 +39,14 @@
       justify-content: center;
       align-items: start;
     }
-
-    .menu {
-       position: absolute;
-       background: rgb(0,0,0);
-       width: 100%;
-       margin-left: -100%;
-       transition: all 0.5s;
-    }
-
-    .menu ul {
-        flex-direction: column;
-    }
-
-    .menu li {
-        border-top: 1px solid #fff;
-    }
-
-    #boton-menu:checked ~ .menu {
-        margin: 0;
-    }
-     
-    #infofoto {
-        height: 300px;
-        overflow: hidden;
-    }
-
-    #infofoto img {
-        height: auto;
-    }
          
 }
 
 @media (min-width:1024px) {
-   .menu    {
-       position: static;
-       width: auto;
-       height: auto;
-       float: right;
-       display: flex;
-    }
 
     .sociales {
         width: 100%;
         text-align: center;
     }
     
-    #infofoto img {
-        font-size: 60px;
-        
-    }
 }
