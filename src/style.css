@@ -6,7 +6,6 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-
 }
 
 body {
@@ -28,12 +27,12 @@ header a {
 
 .logo-menu .menu a {
     display: inline-block;
-    padding: 10px 5px;
+    padding: 20px 10px;
 }
 
 .logo-menu .menu a:hover{
     border-bottom: 4px solid rgb(182, 30, 3);
-    padding-bottom: 36px;
+    padding-bottom: 20px;
 }
 
 #logo {
@@ -84,13 +83,27 @@ header a {
     border:  1px solid #000;
 }  
 
+#postwall {
+    padding: 30px;
+    text-align: center;
+    align-items: center;
+    border:  1px solid #000;
+}
+
+#posteo {
+    height: 100px;
+    width: 200px;
+    text-align: center;
+    margin: 20px 20px;
+}
+
 .input {
     display: flex;
     float: left;
     margin: 30px;
     padding: 2px;
-    width: 150px;
-    height: 20px;
+    width: 200px;
+    height: 50px;
     
   }
 
