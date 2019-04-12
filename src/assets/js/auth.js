@@ -117,8 +117,12 @@ auth.sendPasswordResetEmail(email).then(function() {
 
 export const postUser = (description) =>{
   var user = firebase.auth().currentUser;
-  firebase.database().ref('users/'+ user.uid).push({
+  firebase.database().ref('users/'+ user.uid +'/viajes/').push({
     comentario : description,
 });
 };
 
+export const showPost =() =>{
+  var posteos = firebase.database().ref('users/'+ user.uid +'/viajes/' + postId + '/description');
+  description.on('value',(snapshot.val()));
+}
