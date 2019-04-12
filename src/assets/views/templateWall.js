@@ -24,6 +24,9 @@ export const templateWall =()=>{
                           <div class="boxPost col-xs-12 col-sm-4 center-xs">
                           <button class="btn" id="post">Postear</button>
                           </div>
+                          <div class="boxPost col-xs-12 col-sm-4 center-xs">
+                          <textarea name="tuPost" id="postViajeros"></textarea>
+                          </div>
                           </div>
                           </div>
                           </div>
