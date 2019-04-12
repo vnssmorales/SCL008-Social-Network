@@ -1,13 +1,9 @@
 
-@media (min-width:480px) {
+/*@media (min-width:480px) {
 
   @media (max-width:768px) {
 
-    body, html {
-        min-height: 100vh;
-        flex-direction: column;
-        display: flex;
-    }
+    
 
     #logo2{
         text-align: left;
