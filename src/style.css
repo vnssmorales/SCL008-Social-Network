@@ -23,12 +23,12 @@ header a {
 }
 
 .logo-menu {
-    background: rgb(87, 81, 81);
+    background: rgb(133, 124, 124);
 }
 
 .logo-menu .menu a {
     display: inline-block;
-    padding: 20px 10px;
+    padding: 10px 5px;
 }
 
 .logo-menu .menu a:hover{
@@ -104,7 +104,7 @@ header a {
 
 
 footer {
-    background: rgb(87, 81, 81);
+    background: rgb(133, 124, 124);
     padding: 20px 0;
 }
 
@@ -114,8 +114,7 @@ footer p {
 
 #help {
     width: 100%;
-    text-align: right;
-    
+    text-align: center;
 }
 
 .copy {
