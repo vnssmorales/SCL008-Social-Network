@@ -16,6 +16,7 @@ export const loginGoogle = () =>{
       displayName: user.displayName,
       email: user.email,
     });
+   
   } else {
     // No user is signed in.
   }
@@ -98,6 +99,7 @@ firebase.auth().signInWithEmailAndPassword(nameActive, passActive).catch(functio
 })
 // [END authwithemail]
   return 'Login con usuario y contraseña ok'
+  
 
 };
 
@@ -113,18 +115,10 @@ auth.sendPasswordResetEmail(email).then(function() {
 )};
 
 
-export const showuser = () =>{
-  firebase.auth().onAuthStateChanged(function(user) {
-    if (user) {
-    return firebase.database().ref('/users/' + user.uid).once('value').then(function(snapshot) {
-    var username = (snapshot.val() && snapshot.val().displayName) || 'Anonymous';
-    console.log(username);
-    return username;
-      }
-      )}
-      })
-    };
-  
-  
- 
- 
+export const postUser = (description) =>{
+  var user = firebase.auth().currentUser;
+  firebase.database().ref('users/'+ user.uid).push({
+    comentario : description,
+});
+};
+

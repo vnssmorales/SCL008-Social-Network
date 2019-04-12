@@ -25,8 +25,7 @@ export const templateLogin =()=>{
 //evento del boton que llama a la autentificacion de google
 
     btn.addEventListener('click',()=>{    
-        loginGoogle();
-        window.location.hash='#/wall';
+        loginGoogle(); 
     })
 
     btn2.addEventListener('click',()=>{

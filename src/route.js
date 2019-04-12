@@ -25,12 +25,6 @@ const changeRouter = (hash) =>{
     if (hash==='#/about'){
         return showTemplate(hash);
     }
-    if (hash==='#/profile'){
-        return showTemplate(hash);
-    }
-    if (hash==='#wall'){
-        return showTemplate(hash);
-    }
 }
 //imprimira el template en el html
 const showTemplate = (hash) =>{
@@ -47,19 +41,15 @@ break;
 case 'login':
     firebase.auth().onAuthStateChanged(user => {
         if (user) {
-            return containterRoot.appendChild(templateWall());
+            window.location.hash='#/wall';
         }
         else{
             return containterRoot.appendChild(templateLogin()); 
         }
     });
-//containterRoot.appendChild(templateLogin());
 break;
 case 'create':
 containterRoot.appendChild(templateCreate());
-break;
-case 'wall':
-containterRoot.appendChild(templateWall());
 break;
 case 'about':
 containterRoot.appendChild(templateAbout());
