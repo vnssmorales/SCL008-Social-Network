@@ -8,7 +8,7 @@ export const templateHome =()=>{
         Si es primera vez que viajas, inicia una nueva conversación dónde puedes pedir recomendaciones para tu
         primer viaje.
         Si ya eres viajero frecuente, comparte tus historias y datos imperdibles!</h4>
-        <img src="./img/ViajaxChile.jpg" alt="imagen chile">
+        <img src="./img/ViajaxChile.jpg" alt="imagen chile" id="fotoinicio">
     </div>`
     containerHome.innerHTML=contentHome;
 

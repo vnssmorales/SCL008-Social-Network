@@ -4,6 +4,7 @@ import {templateHome} from './assets/views/templateHome.js'
 import {templateAbout} from './assets/views/templateAbout.js'
 import {templateWall} from './assets/views/templateWall.js'
 
+
 /*
 crear una funcion que reciba el hast y segun el match retorne otra funcion que va a imprimir el template en el html
 */
@@ -24,6 +25,12 @@ const changeRouter = (hash) =>{
     if (hash==='#/about'){
         return showTemplate(hash);
     }
+    if (hash==='#/profile'){
+        return showTemplate(hash);
+    }
+    if (hash==='#wall'){
+        return showTemplate(hash);
+    }
 }
 //imprimira el template en el html
 const showTemplate = (hash) =>{
@@ -38,7 +45,15 @@ case 'home':
 containterRoot.appendChild(templateHome());
 break;
 case 'login':
-containterRoot.appendChild(templateLogin());
+    firebase.auth().onAuthStateChanged(user => {
+        if (user) {
+            return containterRoot.appendChild(templateWall());
+        }
+        else{
+            return containterRoot.appendChild(templateLogin()); 
+        }
+    });
+//containterRoot.appendChild(templateLogin());
 break;
 case 'create':
 containterRoot.appendChild(templateCreate());
@@ -48,6 +63,12 @@ containterRoot.appendChild(templateWall());
 break;
 case 'about':
 containterRoot.appendChild(templateAbout());
+break;
+case 'profile':
+containterRoot.appendChild(templateProfile());
+break;
+case 'wall':
+containterRoot.appendChild(templateWall());
 break;
 default:
 containterRoot.innerHTML = `<p>Error 408</p>`
@@ -59,7 +80,8 @@ containterRoot.innerHTML = `<p>Error 408</p>`
 export const initRouter=()=>{
 
     window.addEventListener('load',changeRouter(window.location.hash));
-
+    
+    
     //reconoce un cambio en el hash y le pasa el nuevo hash a changRouter
 
     if('onhashchange'in window){

@@ -31,6 +31,8 @@ export const loginGoogle = () =>{
     // ...
   });
 }
+
+
 export const logOut = () =>{
   firebase.auth().signOut().then(function() {
       console.log('Sign-out successful.')
@@ -38,6 +40,8 @@ export const logOut = () =>{
       // An error happened.
     });
   }
+
+
 
 export const createAccount = (userName,email,password) => {
 
@@ -67,20 +71,19 @@ export const createAccount = (userName,email,password) => {
         // No user is signed in.
       }
     
-    });
-    
     // [END createwithemail]
 
   return 'cuenta creada ok'
+});
 }
 
-export const userActive = () =>{
-  let userRegistered = document.getElementById('user').value;
-  let key = document.getElementById('pass').value;
+export const userActive = (nameActive, passActive) =>{
+  // let userRegistered = document.getElementById('user').value;
+  // let key = document.getElementById('pass').value;
   
 // [START authwithemail]
-firebase.auth().signInWithEmailAndPassword(userRegistered, key).catch(function(error) {
-  // Handle Errors here.
+firebase.auth().signInWithEmailAndPassword(nameActive, passActive).catch(function(error) {
+  // Handle Errors here.s
   var errorCode = error.code;
   var errorMessage = error.message;
   // [START_EXCLUDE]
@@ -92,34 +95,36 @@ firebase.auth().signInWithEmailAndPassword(userRegistered, key).catch(function(e
   console.log(error);
   document.getElementById('quickstart-sign-in').disabled = false;
   // [END_EXCLUDE]
-});
+})
 // [END authwithemail]
-
   return 'Login con usuario y contraseña ok'
 
-}
-
-export const createPost = () => {
-
-  return 'escribe tu post'
-}
-
+};
 
 //recodar contraseña
 export const remember = (email) => {
 var auth = firebase.auth();
 auth.sendPasswordResetEmail(email).then(function() {
   // Email sent.
-}).catch(function(error) {
-  // An error happened.
-});
 }
+.catch(function(error) {
+  // An error happened.
+})
+)};
+
 
 export const showuser = () =>{
-  // //var userId = firebase.auth().currentUser.uid;
-  // return firebase.database().ref('/users/' + userId).once('value').then(function(snapshot) {
-  //   var username = (snapshot.val() && snapshot.val().username) || 'Anonymous';
-  //   // ...
-  // });
-  // console.log(username);
-}
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+    return firebase.database().ref('/users/' + user.uid).once('value').then(function(snapshot) {
+    var username = (snapshot.val() && snapshot.val().displayName) || 'Anonymous';
+    console.log(username);
+    return username;
+      }
+      )}
+      })
+    };
+  
+  
+ 
+ 
