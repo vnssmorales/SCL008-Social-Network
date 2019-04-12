@@ -1,5 +1,5 @@
 
-import{postUser} from './../js/auth.js';
+import{postUser,showPost} from './../js/auth.js';
 
 export const templateWall =()=>{
     // let userName = showuser();
@@ -36,6 +36,7 @@ export const templateWall =()=>{
             btn.addEventListener('click',()=>{    
                 let description = document.getElementById('posteo').value;
                postUser(description);
+                showPost();
             })
 
         

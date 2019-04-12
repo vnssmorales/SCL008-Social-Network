@@ -122,7 +122,13 @@ export const postUser = (description) =>{
 });
 };
 
-export const showPost =() =>{
-  var posteos = firebase.database().ref('users/'+ user.uid +'/viajes/' + postId + '/description');
-  description.on('value',(snapshot.val()));
-}
+export const showPost =(valorpost) =>{
+  var user = firebase.auth().currentUser;
+  var posteos = firebase.database().ref('users/'+ user.uid +'/viajes/');
+  return posteos.once('value').then(function(snapshot) {
+    let post = Object.values(snapshot.val());
+    // Arreglo de objetos con su valor
+    console.log(post);
+  
+     });
+  }
