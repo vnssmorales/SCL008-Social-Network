@@ -5,8 +5,10 @@ import{logOut} from './../js/auth.js';
 export const templateProfile =()=>{
     showuser();
     const containerLogo = document.getElementById('logo2');
-    const contentLogo= `<img src="./img/LogoChile.png" class="logo2" /><div id="nameuser">${name}</div>
-    <p>Desloguearse</p>                       <button class="btn" id="logOut">Desloguearse</button>`
+    const contentLogo= `<img src="./img/LogoChile.png" class="logo2" />
+                        <div id="nameuser">${name}</div>
+                        <p>Desloguearse</p>     
+                        <button class="btn" id="logOut">Desloguearse</button>`
     containerLogo.innerHTML=contentLogo;
     const btn=containerLogo.querySelector('#logOut');
     btn.addEventListener('click',()=>{

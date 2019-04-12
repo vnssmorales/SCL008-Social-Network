@@ -58,6 +58,11 @@
 
     .menu li {
         border-top: 1px solid #fff;
+
+    }
+
+    #menu:checked ~ .menu-li {
+        margin: 0;
     }
 
     #boton-menu:checked ~ .menu {

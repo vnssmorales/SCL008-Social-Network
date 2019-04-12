@@ -4,6 +4,7 @@ import {templateHome} from './assets/views/templateHome.js'
 import {templateAbout} from './assets/views/templateAbout.js'
 import {templateWall} from './assets/views/templateWall.js'
 
+
 /*
 crear una funcion que reciba el hast y segun el match retorne otra funcion que va a imprimir el template en el html
 */
@@ -27,7 +28,7 @@ const changeRouter = (hash) =>{
 }
 //imprimira el template en el html
 const showTemplate = (hash) =>{
-const router=hash.substring(2);
+const router=hash.substring(2); //para que saque el # y tome solo login no #login
 let containterRoot = document.getElementById("root");
 containterRoot.innerHTML='';
 
