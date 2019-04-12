@@ -13,11 +13,6 @@
         display: flex;
     }
 
-    header {
-      flex-direction: row;
-      text-align: center;
-    }
-
     #logo2{
         text-align: left;
     }
@@ -44,30 +39,6 @@
       align-items: start;
     }
 
-    .menu {
-       position: absolute;
-       background: rgb(0,0,0);
-       width: 100%;
-       margin-left: -100%;
-       transition: all 0.5s;
-    }
-
-    .menu ul {
-        flex-direction: column;
-    }
-
-    .menu li {
-        border-top: 1px solid #fff;
-
-    }
-
-    #menu:checked ~ .menu-li {
-        margin: 0;
-    }
-
-    #boton-menu:checked ~ .menu {
-        margin: 0;
-    }
      
     #infofoto {
         height: 300px;
@@ -81,13 +52,6 @@
 }
 
 @media (min-width:1024px) {
-   .menu    {
-       position: static;
-       width: auto;
-       height: auto;
-       float: right;
-       display: flex;
-    }
 
     .sociales {
         width: 100%;
